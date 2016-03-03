@@ -1,0 +1,13 @@
+#!/usr/bin/expect
+#Author by fls
+#date is 2016-02-19
+set host [lindex $argv 0]
+set password  QaZ12WsX911
+set src_file   /root/first.sh
+set dst_file  /root
+spawn scp $src_file root@$host:$dst_file
+expect {
+        "*assword:" { send "$password\r" }  
+}
+expect "100%"
+expect eof
