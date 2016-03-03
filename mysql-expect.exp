@@ -1,0 +1,17 @@
+#!/usr/bin/expect
+#Author by fls
+#date is 2016-02-19
+spawn mysql_secure_installation
+expect {
+"Enter current password*"  { send "\r"; exp_continue}
+"Set root password?*"    { send "Y\r"; exp_continue}
+"New password:"    { send "wolflink\r"; exp_continue}
+"Re-enter new password:*"  { send "wolflink\r"; exp_continue}
+"Remove anonymous*"	{ send "Y\r"; exp_continue}
+"Disallow root*"	{ send "Y\r"; exp_continue}
+"Remove test*"	{ send "Y\r"; exp_continue}
+"Reload privilege*"   { send "Y\r"; exp_continue}
+}
+expect "Thanks*"
+expect eof
+
