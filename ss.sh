@@ -8,3 +8,8 @@ echo  "6.start SS  SUCCESS"
 cp -f /root/supervisord.conf /etc/supervisord.conf
 echo  "6.autostart  SUCCESS"
 cp  -f /root/sysctl.conf /etc/sysctl.conf
+systemctl start  supervisord.service
+systemctl enable  supervisord.service
+
+
+
