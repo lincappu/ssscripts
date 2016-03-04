@@ -4,8 +4,8 @@ export PATH
 clear
 echo ""
 echo "#############################################################"         
-echo "#  SS/VPN Server deny ip list  Created£º2015-11-17          #"
-echo "#  author:superfls            Mail:lincappu@163.com       #"
+echo "#  SS/VPN Server deny ip list  Created£2015-11-17           #"
+echo "#  author:superfls            Mail:lincappu@163.com         #"
 echo "#############################################################"
 echo ""
 iptables   -A   OUTPUT   -d   173.194.72.2/21   -j    DROP
